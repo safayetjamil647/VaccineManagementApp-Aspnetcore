@@ -227,3 +227,4 @@ C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Raz
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\VaccineCandidates\Details.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\VaccineCandidates\Edit.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\VaccineCandidates\Index.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
