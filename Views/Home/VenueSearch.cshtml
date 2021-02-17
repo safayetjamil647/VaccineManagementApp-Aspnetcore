@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Search Venue";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to search your venue site's </p>
+<form asp-controller="Venues" asp-action="Index" method="get">
+    <p>
+        Title: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>

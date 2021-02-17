@@ -142,7 +142,6 @@ C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Med
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\MedicaTeams.RazorCoreGenerate.cache
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -228,3 +227,6 @@ C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Raz
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\VaccineCandidates\Edit.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\VaccineCandidates\Index.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Dashboard\Dashboard.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Home\VenueSearch.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs

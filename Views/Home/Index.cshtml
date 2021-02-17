@@ -2,7 +2,54 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="row">
+        <div class="col space">
+            <h1>Welcome to Medica</h1>
+            <p>it is  easy to find a location</p>
+            <a type="button" class="btn btn-primary mt-3" asp-controller="Home" asp-action="VenueSearch">Search Now</a>
+        </div>
+        <div class="col">
+            <img src="~/images/medical_care_movn.svg" class="img-fluid" alt="My image" />
+        </div>
+    </div>
+    <h2 class="text-center">Developed By</h2>
+    <div class="row space">
+        <div class="col">
+            <img src="~/images/safayetjamil.jpeg" class="img-fluid" alt="My image" />
+        </div>
+
+        <div class="col">
+            <h1>I am Safayet Jamil</h1>
+            <p>My personality</p>
+
+        </div>
+    </div>
+   
+        <div class="row">
+            <div class="col">
+                C Sharp
+            </div>
+            <div class="col">
+                Asp Net Core
+            </div>
+            <div class="col">
+                Entity Core
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="..." alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Compliment</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
+
