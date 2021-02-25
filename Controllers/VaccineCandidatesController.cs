@@ -22,10 +22,17 @@ namespace MedicaTeams.Controllers
         }
 
         // GET: VaccineCandidates
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchstring,string sortOrder)
         {
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            var vaccinecandidates = from v in _context.VaccineCandidate
+                         select v;
+            if (!String.IsNullOrEmpty(searchstring))
+            {
+                vaccinecandidates = vaccinecandidates.Where(s => s.Name.Contains(searchstring));
+            }
             var applicationDbContext = _context.VaccineCandidate.Include(v => v.Venue);
-            return View(await applicationDbContext.ToListAsync());
+            return View(await vaccinecandidates.ToListAsync());
         }
 
         // GET: VaccineCandidates/Details/5

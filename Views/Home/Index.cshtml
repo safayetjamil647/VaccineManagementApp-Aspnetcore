@@ -1,55 +1,153 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="container">
+@*header*@
+<div class="container space">
     <div class="row">
-        <div class="col space">
-            <h1>Welcome to Medica</h1>
-            <p>it is  easy to find a location</p>
-            <a type="button" class="btn btn-primary mt-3" asp-controller="Home" asp-action="VenueSearch">Search Now</a>
-        </div>
-        <div class="col">
+        <div class="col-lg-6 space">
             <img src="~/images/medical_care_movn.svg" class="img-fluid" alt="My image" />
         </div>
-    </div>
-    <h2 class="text-center">Developed By</h2>
-    <div class="row space">
-        <div class="col">
-            <img src="~/images/safayetjamil.jpeg" class="img-fluid" alt="My image" />
+        <div class="col-lg-6 space">
+            <p class="header-subtitle">Multipurpose Team Management</p>
+            <h1 class="header-title">Beautifully<br />simple,code.</h1>
+            <p class="header-title-text">Medica Team is a beautifully simple, clean and lightweight Vaccine Team Management Solution for all types of businesses, and organizations</p>
+            <div class="learn-more-btn-section">
+                <a type="button" class="nav-link learn-more-btn btn-invert" asp-controller="Home" asp-action="VenueSearch">Search Now</a>
+            </div>
         </div>
 
-        <div class="col">
-            <h1>I am Safayet Jamil</h1>
-            <p>My personality</p>
-
-        </div>
     </div>
-   
-        <div class="row">
-            <div class="col">
-                C Sharp
-            </div>
-            <div class="col">
-                Asp Net Core
-            </div>
-            <div class="col">
-                Entity Core
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="..." alt="...">
+    @*strategy*@
+    <div class="container strategy-container space">
+        <div class="col-lg-3 col-md-6 col-xs-8 offset-xs-2 strategy-card-section">
+            <div class="strategy-card">
+                <div class="strategy-card-icon-section">
+                    <img src="~/images/strategy-1.png">
                 </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Compliment</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h2>Strategy</h2>
+                <p>We'll work with you to develop the right strategy</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-8 offset-xs-2 strategy-card-section">
+            <div class="strategy-card">
+                <div class="strategy-card-icon-section">
+                    <img src="~/images/strategy-2.png">
+                </div>
+                <h2>Automation</h2>
+                <p>Work synchronization and automated services</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-8 offset-xs-2 strategy-card-section">
+            <div class="strategy-card">
+                <div class="strategy-card-icon-section">
+                    <img src="~/images/strategy-3.png">
+                </div>
+                <h2>Deployment</h2>
+                <p>Dedicated servers to deploy and test applications</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-8 offset-xs-2 strategy-card-section">
+            <div class="strategy-card">
+                <div class="strategy-card-icon-section">
+                    <img src="~/images/strategy-4.png">
+                </div>
+                <h2>Education</h2>
+                <p>Stay informed on all our tools and technologies</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="services-section">
+        <div class="services-section-bg-graphics">
+            <img src="assets/images/services-section-bg.png">
+        </div>
+        <div class="container services-container">
+            <div class="col-lg-5 services-title-section">
+                <p class="services-subtitle">Our services</p>
+                <h2 class="services-title">Solving Problems</h2>
+                <p class="services-text">This is a great section to introduce your company and showcase your featured services.</p>
+                <div class="services-accordion">
+                    <button class="accordion">
+                        Website Design
+                    </button>
+                    <div class="panel">
+                        <p>
+                            Some information on your web design and development services can go here. A few lines should do the trick.
+                        </p>
+                    </div>
+                    <button class="accordion">
+                        Application Development
+                    </button>
+                    <div class="panel">
+                        <p>
+                            More information on your application development services can go here, too. There's plenty of space available for you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 offset-lg-1 services-header-img-section">
+                <img src="~/images/services-header.png">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <div class="card mb-3 space" style="max-width: ;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/images/safayetjamil.jpeg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Compliment</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <div class="card mb-3 space" style="max-width: ;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/images/safayetjamil.jpeg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Compliment</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Button with data-target
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+    </div>
 </div>
 
