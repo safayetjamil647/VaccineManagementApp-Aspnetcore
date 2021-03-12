@@ -239,3 +239,103 @@ body {
 .services-header-img-section img {
     width: 100%;
 }
+.services-container {
+    position: relative;
+    display: flex;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    flex-wrap: wrap;
+}
+.services-header-img-section img {
+    width: 100%;
+}
+.services-title-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+.services-subtitle {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 2;
+}
+.services-title {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 1;
+    color: #303669;
+    margin-bottom: 20px;
+}
+.services-text {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.learn-more-btn-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+.contact-section {
+    padding-top: 55px;
+    padding-bottom: 90px;
+}
+.contact-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-title-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+.contact-subtitle {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 2;
+}
+.contact-title {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 1;
+    color: #303669;
+    margin-bottom: 20px;
+}
+.contact-text {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.learn-more-btn-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+.contact-header-img img {
+    width: 100%;
+}
+.nav-logo {
+    font-size: 45px;
+}
+.footer-logo {
+    font-size: 25px;
+}
+
+.dashboard-text{
+    font-size:30px;
+}

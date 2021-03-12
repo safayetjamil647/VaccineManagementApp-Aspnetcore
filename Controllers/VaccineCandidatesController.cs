@@ -22,15 +22,39 @@ namespace MedicaTeams.Controllers
         }
 
         // GET: VaccineCandidates
-        public async Task<IActionResult> Index(string searchstring,string sortOrder)
+        public async Task<IActionResult> Index(string searchstring,string sortOrder, int? pageNumber, string currentFilter)
         {
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            if (searchstring != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchstring = currentFilter;
+            }
+            ViewData["CurrentFilter"] = searchstring;
             var vaccinecandidates = from v in _context.VaccineCandidate
                          select v;
             if (!String.IsNullOrEmpty(searchstring))
             {
                 vaccinecandidates = vaccinecandidates.Where(s => s.Name.Contains(searchstring));
             }
+            switch (sortOrder)
+            {
+               
+                case "Date":
+                    vaccinecandidates = vaccinecandidates.OrderBy(s => s.VaccineDate);
+                    break;
+                case "date_desc":
+                    vaccinecandidates = vaccinecandidates.OrderByDescending(s => s.VaccineDate);
+                    break;
+                default:
+                    vaccinecandidates = vaccinecandidates.OrderBy(s => s.Name);
+                    break;
+            }
+            int pageSize = 10;
+            return View(await PaginatedList<VaccineCandidate>.CreateAsync(vaccinecandidates.AsNoTracking(), pageNumber ?? 1, pageSize));
             var applicationDbContext = _context.VaccineCandidate.Include(v => v.Venue);
             return View(await vaccinecandidates.ToListAsync());
         }
