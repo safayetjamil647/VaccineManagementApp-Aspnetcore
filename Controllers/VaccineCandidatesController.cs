@@ -34,8 +34,8 @@ namespace MedicaTeams.Controllers
                 searchstring = currentFilter;
             }
             ViewData["CurrentFilter"] = searchstring;
-            var vaccinecandidates = from v in _context.VaccineCandidate
-                         select v;
+            var vaccinecandidates = from v in _context.VaccineCandidate.Include(v => v.Venue)
+                                    select v;
             if (!String.IsNullOrEmpty(searchstring))
             {
                 vaccinecandidates = vaccinecandidates.Where(s => s.Name.Contains(searchstring));
@@ -53,9 +53,9 @@ namespace MedicaTeams.Controllers
                     vaccinecandidates = vaccinecandidates.OrderBy(s => s.Name);
                     break;
             }
-            int pageSize = 10;
+            int pageSize = 5;
             return View(await PaginatedList<VaccineCandidate>.CreateAsync(vaccinecandidates.AsNoTracking(), pageNumber ?? 1, pageSize));
-            var applicationDbContext = _context.VaccineCandidate.Include(v => v.Venue);
+            //var applicationDbContext = _context.VaccineCandidate.Include(v => v.Venue);
             return View(await vaccinecandidates.ToListAsync());
         }
 

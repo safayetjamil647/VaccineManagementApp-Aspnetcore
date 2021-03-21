@@ -20,10 +20,41 @@ namespace MedicaTeams.Controllers
         }
 
         // GET: ApplyOnlines
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString, string sortOrder, int? pageNumber, string currentFilter)
         {
-            var applicationDbContext = _context.ApplyOnlines.Include(a => a.Venue);
-            return View(await applicationDbContext.ToListAsync());
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewData["CurrentFilter"] = searchString;
+            var onlines = from o in _context.ApplyOnlines.Include(a => a.Venue)
+                          select o;
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                onlines = onlines.Where(s=>s.Name.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+
+                case "Date":
+                    onlines = onlines.OrderBy(s => s.PreferedDate);
+                    break;
+                case "date_desc":
+                    onlines = onlines.OrderByDescending(s => s.PreferedDate);
+                    break;
+                default:
+                    onlines = onlines.OrderBy(s => s.Name);
+                    break;
+            }
+            int pageSize = 5;
+            return View(await PaginatedList<ApplyOnline>.CreateAsync(onlines.AsNoTracking(), pageNumber ?? 1, pageSize));
+            //var applicationDbContext = _context.ApplyOnlines.Include(a => a.Venue);
+            return View(await onlines.ToListAsync());
         }
 
         // GET: ApplyOnlines/Details/5
@@ -64,11 +95,11 @@ namespace MedicaTeams.Controllers
             {
                 _context.Add(applyOnline);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Welcome","Home");
             }
             
             ViewData["VenueId"] = new SelectList(_context.Venue, "VenueId", "VenueId", applyOnline.VenueId);
-            return View(applyOnline);
+            return RedirectToAction(nameof(applyOnline));
         }
 
         // GET: ApplyOnlines/Edit/5

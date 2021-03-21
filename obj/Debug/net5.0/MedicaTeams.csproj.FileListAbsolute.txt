@@ -235,3 +235,4 @@ C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Raz
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\ApplyOnlines\Details.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\ApplyOnlines\Edit.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\ApplyOnlines\Index.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Home\Welcome.cshtml.g.cs

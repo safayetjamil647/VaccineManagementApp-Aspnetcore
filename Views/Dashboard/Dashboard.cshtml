@@ -6,16 +6,16 @@
 
         <div class="col-sm">
             <div class="card border-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
+                <div class="card-header">List</div>
                 <div class="card-body">
-                    <a asp-controller="Venues" asp-action="Index" class="card-title text-dark dashboard-text">Index of Venue</a>
+                    <a asp-controller="Venues" asp-action="Index" class="card-title text-dark dashboard-text">Venue Index</a>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
         </div>
         <div class="col-sm">
             <div class="card  border-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
+                <div class="card-header">List</div>
                 <div class="card-body">
                     <a asp-controller="VaccineCandidates" asp-action="Index" class="card-title text-dark dashboard-text">Candidates Index</a>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -24,9 +24,9 @@
         </div>
         <div class="col-sm">
             <div class="card border-info mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
+                <div class="card-header">Add</div>
                 <div class="card-body">
-                    <a asp-controller="VaccineCandidates" asp-action="Create" class="card-title">Create Candidates</a>
+                    <a asp-controller="VaccineCandidates" asp-action="Create" class="card-title text-dark dashboard-text">Add Candidate</a>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
@@ -35,9 +35,9 @@
     <div class="row">
         <div class="col-sm">
             <div class="card border-info mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
+                <div class="card-header">List</div>
                 <div class="card-body">
-                    <h5 class="card-title">Index of Online Applicants</h5>
+                    <a asp-controller="ApplyOnlines" asp-action="Index" class="card-title text-dark dashboard-text">Online Index</a>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
@@ -48,18 +48,18 @@
             {
                 <div class="col-sm">
                     <div class="card  border-info mb-3" style="max-width: 18rem;">
-                        <div class="card-header">Header</div>
+                        <div class="card-header">Add</div>
                         <div class="card-body">
-                            <a asp-controller="Venues" asp-action="Create" class="card-title">Create Venues</a>
+                            <a asp-controller="Venues" asp-action="Create" class="card-title text-dark dashboard-text">Add Venue</a>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="card border-primary mb-3" style="max-width: 18rem;">
-                        <div class="card-header">Header</div>
+                        <div class="card-header">Add</div>
                         <div class="card-body">
-                            <a class="card-title text-dark dashboard-text" asp-area="Identity" asp-page="/Account/Register">New Volunteer</a>
+                            <a class="card-title text-dark dashboard-text" asp-area="Identity" asp-page="/Account/Register">Add Volunteer</a>
                             <p class="card-text">In this page i will add number off vc venue,candidate,voluteer etc</p>
                         </div>
                     </div>

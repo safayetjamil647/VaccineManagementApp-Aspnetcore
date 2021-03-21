@@ -6,15 +6,16 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <form asp-controller="Venues" asp-action="Index" method="get">
     <p>
         Title: <input type="text" name="SearchString" />
         <input type="submit" value="Filter" />
     </p>
 </form>
+<div>
+    <a class="btn btn-primary" asp-controller="ApplyOnlines" asp-action="Create">Apply Online</a>
+</div>
 <table class="table">
     <thead>
         <tr>
