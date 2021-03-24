@@ -1,20 +1,14 @@
 ﻿@model IEnumerable<MedicaTeams.Models.Venue>
-
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
 
-
-<form asp-controller="Venues" asp-action="Index" method="get">
-    <p>
-        Title: <input type="text" name="SearchString" />
-        <input type="submit" value="Filter" />
-    </p>
-</form>
 <div>
-    <a class="btn btn-primary" asp-controller="ApplyOnlines" asp-action="Create">Apply Online</a>
+    <a class="btn btn-primary" asp-controller="ApplyOnlines" asp-action="Create">Apply for Vaccine</a>
 </div>
 <table class="table">
     <thead>
@@ -40,11 +34,21 @@
             <th>
                 @Html.DisplayNameFor(model => model.NumberOfVolunteer)
             </th>
-            <th></th>
-        </tr>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                if (User.IsInRole("Administrator"))
+                {
+                    <th>
+                        Actions
+                    </th>
+                    
+                }
+            }
+                </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.VenueName)
@@ -67,12 +71,18 @@
             <td>
                 @Html.DisplayFor(modelItem => item.NumberOfVolunteer)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.VenueId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.VenueId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.VenueId">Delete</a>
-            </td>
-        </tr>
-}
+            @if (SignInManager.IsSignedIn(User))
+            {
+                if (User.IsInRole("Administrator"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.VenueId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.VenueId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.VenueId">Delete</a>
+                    </td>
+                }
+            }
+                </tr>
+        }
     </tbody>
 </table>

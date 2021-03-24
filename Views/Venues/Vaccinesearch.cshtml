@@ -1,0 +1,89 @@
+﻿@model IEnumerable<MedicaTeams.Models.Venue>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<div>
+    <a class="btn btn-primary" asp-controller="ApplyOnlines" asp-action="Create">Apply for vaccine</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VenueName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DistrictName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VaccineName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VaccineAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VolunteerGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfVolunteer)
+            </th>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                if (User.IsInRole("Administrator"))
+                {
+                    <th>
+                        Actions
+                    </th>
+
+                }
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VenueName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DistrictName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VaccineName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VaccineAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VolunteerGroup)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfVolunteer)
+                </td>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    if (User.IsInRole("Administrator"))
+                    {
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.VenueId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.VenueId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.VenueId">Delete</a>
+                        </td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>

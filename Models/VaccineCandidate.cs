@@ -14,7 +14,7 @@ namespace MedicaTeams.Models
         public string Name { get; set; }
         public int Age { get; set; }
         [Required]
-        [RegularExpression(@"^+880"),StringLength(12, MinimumLength = 11)]
+        [StringLength(14, MinimumLength = 14)]
         public string PhoneNumber { get; set; }
         [Required]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]

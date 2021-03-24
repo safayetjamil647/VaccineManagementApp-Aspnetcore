@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MedicaTeams.Controllers
 {
-    [Authorize(Roles ="Administrator")]
     public class VenuesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -32,7 +31,17 @@ namespace MedicaTeams.Controllers
             }
             return View(await venues.ToListAsync());
         }
-
+        public async Task<IActionResult> Vaccinesearch(string searchstring)
+        {
+            var venues = from v in _context.Venue
+                         select v;
+            if (!String.IsNullOrEmpty(searchstring))
+            {
+                venues = venues.Where(s => s.VaccineName.Contains(searchstring));
+            }
+            return View(await venues.ToListAsync());
+        }
+        [Authorize(Roles = "Administrator")]
         // GET: Venues/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -50,13 +59,13 @@ namespace MedicaTeams.Controllers
 
             return View(venue);
         }
-
+        [Authorize(Roles = "Administrator")]
         // GET: Venues/Create
         public IActionResult Create()
         {
             return View();
         }
-
+        [Authorize(Roles = "Administrator")]
         // POST: Venues/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -72,7 +81,7 @@ namespace MedicaTeams.Controllers
             }
             return View(venue);
         }
-
+        [Authorize(Roles = "Administrator")]
         // GET: Venues/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -88,7 +97,7 @@ namespace MedicaTeams.Controllers
             }
             return View(venue);
         }
-
+        [Authorize(Roles = "Administrator")]
         // POST: Venues/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -123,7 +132,7 @@ namespace MedicaTeams.Controllers
             }
             return View(venue);
         }
-
+        [Authorize(Roles = "Administrator")]
         // GET: Venues/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -141,7 +150,7 @@ namespace MedicaTeams.Controllers
 
             return View(venue);
         }
-
+        [Authorize(Roles = "Administrator")]
         // POST: Venues/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

@@ -15,8 +15,9 @@
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+                <input asp-for="Name" class="form-control" placeholder="Enter you name" />
                 <span asp-validation-for="Name" class="text-danger"></span>
+                <span class="text-secondary">Minimum 3 and Maximum 40 Charecters</span>
             </div>
             <div class="form-group">
                 <label asp-for="Age" class="control-label"></label>
@@ -24,22 +25,22 @@
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
+                <label asp-for="PhoneNumber" class="control-label">Phone Number</label>
+                <input asp-for="PhoneNumber" class="form-control" value="+880" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="VaccineDate" class="control-label"></label>
+                <label asp-for="VaccineDate" class="control-label">Vaccine Date</label>
                 <input asp-for="VaccineDate" class="form-control" />
                 <span asp-validation-for="VaccineDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Abnormalities" class="control-label"></label>
-                <input asp-for="Abnormalities" class="form-control" />
+                <input asp-for="Abnormalities" class="form-control"/>
                 <span asp-validation-for="Abnormalities" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Venue" class="control-label"></label>
+                <label asp-for="Venue" class="control-label">Venue Name</label>
                 <select asp-for="VenueId" class="form-control" asp-items="@(SelectList)ViewBag.Options"></select>
             </div>
             <div class="form-group">

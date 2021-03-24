@@ -26,30 +26,33 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Pricing</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Volunteers" asp-action="Create">Be A Volunteer</a>
                         </li>
-                        @if (SignInManager.IsSignedIn(User))
-                        {
-                            if (User.IsInRole("Administrator"))
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Venues" asp-action="Index">Venues</a>
-                                </li>
-                            }
+                        @*@if (SignInManager.IsSignedIn(User))
+        {
+            if (User.IsInRole("Administrator"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Venues" asp-action="Index">Venues</a>
+                </li>
+            }
 
-                        }
-                        @if (SignInManager.IsSignedIn(User))
-                        {
-                            if (User.IsInRole("Administrator"))
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="VaccineCandidates" asp-action="Index">Vaccines</a>
-                                </li>
-                            }
-                        }
+        }
+        @if (SignInManager.IsSignedIn(User))
+        {
+            if (User.IsInRole("Administrator"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="VaccineCandidates" asp-action="Index">Vaccines</a>
+                </li>
+            }
+        }*@
                         @if (SignInManager.IsSignedIn(User))
                         {
 
@@ -79,30 +82,31 @@
             <div class="col-6 col-md">
                 <h5>Features</h5>
                 <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Cool stuff</a></li>
-                    <li><a class="text-muted" href="#">Random feature</a></li>
-                    <li><a class="text-muted" href="#">Team feature</a></li>
-                    <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                    <li><a class="text-muted" href="#">Another one</a></li>
-                    <li><a class="text-muted" href="#">Last time</a></li>
+                    <li><a class="text-muted" href="#">Searching</a></li>
+                    <li><a class="text-muted" href="#">Sorting</a></li>
+                    <li><a class="text-muted" href="#">Pagination</a></li>
+                    <li><a class="text-muted" href="#">Authentication</a></li>
+                    <li><a class="text-muted" href="#">Role Authorization</a></li>
+                    <li><a class="text-muted" href="#">access Control</a></li>
+
                 </ul>
             </div>
             <div class="col-6 col-md">
-                <h5>Learnings</h5>
+                <h5>Languages</h5>
                 <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Resource</a></li>
-                    <li><a class="text-muted" href="#">Resource name</a></li>
-                    <li><a class="text-muted" href="#">Another resource</a></li>
-                    <li><a class="text-muted" href="#">Final resource</a></li>
+                    <li><a class="text-muted" href="#">C sharp</a></li>
+                    <li><a class="text-muted" href="#">Asp net core </a></li>
+                    <li><a class="text-muted" href="#">SQL</a></li>
+
                 </ul>
             </div>
             <div class="col-6 col-md">
-                <h5>Resources</h5>
+                <h5>Our Team</h5>
                 <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Business</a></li>
-                    <li><a class="text-muted" href="#">Education</a></li>
-                    <li><a class="text-muted" href="#">Government</a></li>
-                    <li><a class="text-muted" href="#">Gaming</a></li>
+                    <li><a class="text-muted" href="#">Md:Shalauddin Kabir (Project cordinator)</a></li>
+                    <li><a class="text-muted" href="#">Sheikh Mekail(082)</a></li>
+                    <li><a class="text-muted" href="#">Kazi Safayet Jamil(062)</a></li>
+                    
                 </ul>
             </div>
             <div class="col-6 col-md">

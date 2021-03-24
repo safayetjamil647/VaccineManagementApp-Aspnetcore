@@ -14,7 +14,7 @@ namespace MedicaTeams.Models
         public string Name { get; set; }
 
         [Required]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$"),StringLength(12, MinimumLength = 11)]
+        [StringLength(14, MinimumLength = 14)]
         public string PhoneNumber { get; set; }
         
         public int Age { get; set; }

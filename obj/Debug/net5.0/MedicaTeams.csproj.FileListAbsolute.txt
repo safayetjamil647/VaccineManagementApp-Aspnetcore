@@ -236,3 +236,11 @@ C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Raz
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\ApplyOnlines\Edit.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\ApplyOnlines\Index.cshtml.g.cs
 C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Home\Welcome.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Home\Pricing.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Venues\Vaccinesearch.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Volunteers\Create.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Volunteers\Delete.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Volunteers\Details.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Volunteers\Edit.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Volunteers\Index.cshtml.g.cs
+C:\Users\Safayet Jamil\source\repos\MedicaTeams\MedicaTeams\obj\Debug\net5.0\Razor\Views\Volunteers\Welcome.cshtml.g.cs

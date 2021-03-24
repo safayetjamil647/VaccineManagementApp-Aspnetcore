@@ -16,6 +16,7 @@ namespace MedicaTeams.Data
         public DbSet<MedicaTeams.Models.Venue> Venue { get; set; }
         public DbSet<MedicaTeams.Models.VaccineCandidate> VaccineCandidate { get; set; }
         public DbSet<MedicaTeams.Models.ApplyOnline> ApplyOnlines { get; set; }
+        public DbSet<MedicaTeams.Models.Volunteer> Volunteers { get; set; }
 
     }
 }

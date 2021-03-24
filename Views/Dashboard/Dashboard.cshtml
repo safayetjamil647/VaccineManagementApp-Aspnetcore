@@ -9,7 +9,7 @@
                 <div class="card-header">List</div>
                 <div class="card-body">
                     <a asp-controller="Venues" asp-action="Index" class="card-title text-dark dashboard-text">Venue Index</a>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">By clicking venue index it will take you to the list of total venues and allows you searching</p>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
                 <div class="card-header">List</div>
                 <div class="card-body">
                     <a asp-controller="VaccineCandidates" asp-action="Index" class="card-title text-dark dashboard-text">Candidates Index</a>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">By clicking cadidates index it will take you to the list of total candidates and allows you sorting</p>
                 </div>
             </div>
         </div>
@@ -26,8 +26,8 @@
             <div class="card border-info mb-3" style="max-width: 18rem;">
                 <div class="card-header">Add</div>
                 <div class="card-body">
-                    <a asp-controller="VaccineCandidates" asp-action="Create" class="card-title text-dark dashboard-text">Add Candidate</a>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a asp-controller="VaccineCandidates" asp-action="Create" class="card-title text-dark dashboard-text">Venue Candidate</a>
+                    <p class="card-text">By clicking add it will take you to a form where you can add single candidates who comes to venue</p>
                 </div>
             </div>
         </div>
@@ -37,8 +37,8 @@
             <div class="card border-info mb-3" style="max-width: 18rem;">
                 <div class="card-header">List</div>
                 <div class="card-body">
-                    <a asp-controller="ApplyOnlines" asp-action="Index" class="card-title text-dark dashboard-text">Online Index</a>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a asp-controller="ApplyOnlines" asp-action="Index" class="card-title text-dark dashboard-text">Online Applicants</a>
+                    <p class="card-text">By clicking online index it will take you to the list of total list of online applicants and other actions.</p>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
                         <div class="card-header">Add</div>
                         <div class="card-body">
                             <a asp-controller="Venues" asp-action="Create" class="card-title text-dark dashboard-text">Add Venue</a>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">By clicking Add venue it will take you to a to a form where you can add venues for your events data.</p>
                         </div>
                     </div>
                 </div>
@@ -60,13 +60,30 @@
                         <div class="card-header">Add</div>
                         <div class="card-body">
                             <a class="card-title text-dark dashboard-text" asp-area="Identity" asp-page="/Account/Register">Add Volunteer</a>
-                            <p class="card-text">In this page i will add number off vc venue,candidate,voluteer etc</p>
+                            <p class="card-text">By clicking venue index it will take you to a form where you can add volunteer for your event.</p>
                         </div>
                     </div>
                 </div>
             }
         }
 
+    </div>
+    <div class="row">
+        @if (SignInManager.IsSignedIn(User))
+        {
+            if (User.IsInRole("Administrator"))
+            {
+                <div class="col-sm">
+                    <div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Add</div>
+                        <div class="card-body">
+                            <a class="card-title text-dark dashboard-text" asp-area="" asp-controller="Volunteers" asp-action="Index">Volunteer List</a>
+                            <p class="card-text">By clicking volunteers index it will take you to the list of total volunteers and allows you sorting</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
             </div>
 </div>
 

@@ -15,13 +15,15 @@
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+                <input asp-for="Name" class="form-control" placeholder="Enter you name" />
                 <span asp-validation-for="Name" class="text-danger"></span>
+                <span class="text-secondary">Minimum 3 and Maximum 40 Charecters</span>
             </div>
             <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
+                <label asp-for="PhoneNumber" class="control-label">Phone Number</label>
                 <input asp-for="PhoneNumber" class="form-control" />
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                <span class="text-secondary">Phone Number must not exceed 11 digit</span>
             </div>
             <div class="form-group">
                 <label asp-for="Age" class="control-label"></label>
@@ -29,18 +31,19 @@
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PreferedDate" class="control-label"></label>
+                <label asp-for="PreferedDate" class="control-label">Prefered Date</label>
                 <input asp-for="PreferedDate" class="form-control" />
                 <span asp-validation-for="PreferedDate" class="text-danger"></span>
+                <span class="text-secondary">Put the date you want get vaccinated</span>
             </div>
             <div class="form-group">
-                <label asp-for="VenueId" class="control-label"></label>
+                <label asp-for="VenueId" class="control-label">Venue Name</label>
                 <select asp-for="VenueId" class="form-control" asp-items="@(SelectList)ViewBag.Options"></select>
                 <span asp-validation-for="VenueId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Abnormalities" class="control-label"></label>
-                <input asp-for="Abnormalities" class="form-control" />
+                <input asp-for="Abnormalities" class="form-control"/>
                 <span asp-validation-for="Abnormalities" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -1,0 +1,51 @@
+﻿@model MedicaTeams.Models.Volunteer
+
+@{
+    ViewData["Title"] = "Join Our Team";
+}
+
+<h1>Create</h1>
+
+<h4>Volunteer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" placeholder="Enter your e-mail here" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" placeholder="Enter your name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+                <span class="text-secondary">Minimum 3 and Maximum 40 Charecters</span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label">Phone Number</label>
+                <input asp-for="PhoneNumber" value="+88" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                <span class="text-secondary">Phone Number must not exceed 11 digit</span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Venue" class="control-label">Venue Name</label>
+                <select asp-for="VenueId" class="form-control" asp-items="@(SelectList)ViewBag.Options"></select>
+                <span  class="text-secondary">Select your venue from the list</span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

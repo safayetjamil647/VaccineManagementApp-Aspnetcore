@@ -27,6 +27,10 @@ namespace MedicaTeams.Controllers
         {
             return View();
         }
+        public IActionResult Pricing()
+        {
+            return View();
+        }
         public IActionResult VenueSearch()
         {
             return View();
